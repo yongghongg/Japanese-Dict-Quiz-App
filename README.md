@@ -21,4 +21,4 @@ Click Cancel to exit quiz mode or Continue to continue taking the quiz.
 <img src = "App/Examples/Quiz Mode 2.png" height = 500>
 
 ## Resource: 
-API from [jisho.org] (https://jisho.org/)
+API from [jisho.org](https://jisho.org/)
