@@ -1,6 +1,6 @@
 # Japanese_Dict_Quiz_App
 
-A simple Japanese dictionary app that records your searched words and let you take a quiz on them.
+A simple Japanese dictionary app that records your searched words and lets you take a quiz on them.
 
 
 ## Dictionary Mode:
