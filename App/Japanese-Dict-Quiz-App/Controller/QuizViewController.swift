@@ -38,7 +38,7 @@ class QuizViewController: UIViewController {
         if questionNumber + 1 < questionArray!.count {
             questionNumber += 1
         } else {
-            let alert = UIAlertController(title: "Quiz Finished! Your score is \(correctAnswer) / \(questionArray!.count)", message: "Would you like to continue?", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "The end! Your score is \(correctAnswer)! / \(questionArray!.count)", message: "Would you like to continue?", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: nil))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {_ in self.dismiss(animated: true, completion: nil)}))
             self.present(alert, animated: true, completion: nil)

@@ -70,7 +70,7 @@ class DictionaryViewController: UITableViewController, UISearchBarDelegate {
             switch result {
             case .failure(let error):
                 print(error)
-                self!.showAlert(title: "Something is wrong.", message: "Could not find word")
+                self!.showAlert(title: "Something is wrong.", message: "Could not find word.")
             case .success(let wordResult):
                 let filteredArray = self!.wordArray.filter({$0.name == wordResult[0]})
                 if filteredArray.isEmpty {
@@ -80,7 +80,7 @@ class DictionaryViewController: UITableViewController, UISearchBarDelegate {
                     newWord.japReading = wordResult[2]
                     self!.wordArray.insert(newWord, at: 0)
                 } else {
-                    self!.showAlert(title: "Word Existed", message: "Word is already on the list.")
+                    self!.showAlert(title: "Word existed.", message: "Word is already on the list.")
                 }
             }
         }
@@ -161,10 +161,10 @@ class DictionaryViewController: UITableViewController, UISearchBarDelegate {
     
     //MARK:- Quiz Mode Methods
     @IBAction func startQuizButtonPressed(_ sender: UIButton) {
-        if !wordArray.isEmpty {
+        if wordArray.count > 2 {
             self.performSegue(withIdentifier: "goToQuiz", sender: self)
         } else {
-            showAlert(title: "No word on the list", message: "Start searching for some words.")
+            showAlert(title: "No enough word on the list.", message: "Start searching for more words.")
         }
     }
     
