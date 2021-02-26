@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bwN-EC-eSO">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dictionary-->
+        <scene sceneID="qsJ-NW-tfY">
+            <objects>
+                <tableViewController id="npB-JJ-RCS" customClass="DictionaryViewController" customModule="Japanese_Dict_Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hVa-nI-32Y">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="GzD-F8-zn3">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <outlet property="delegate" destination="npB-JJ-RCS" id="gh4-FL-kjE"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" id="zmq-bK-Phb" customClass="WordCell" customModule="Japanese_Dict_Quiz_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zmq-bK-Phb" id="sOK-lP-w7u">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fJ-H7-QAl">
+                                            <rect key="frame" x="15.000000000000004" y="1" width="42.333333333333343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="japanese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukV-RO-NGH">
+                                            <rect key="frame" x="87.333333333333329" y="1" width="68.999999999999986" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="english" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxK-El-HBT">
+                                            <rect key="frame" x="15" y="24" width="360" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IxK-El-HBT" firstAttribute="top" secondItem="8fJ-H7-QAl" secondAttribute="bottom" constant="2" id="ICC-MG-zII"/>
+                                        <constraint firstItem="ukV-RO-NGH" firstAttribute="top" secondItem="sOK-lP-w7u" secondAttribute="top" constant="1" id="MJP-0U-MzL"/>
+                                        <constraint firstItem="IxK-El-HBT" firstAttribute="leading" secondItem="sOK-lP-w7u" secondAttribute="leading" constant="15" id="S7v-GE-bhD"/>
+                                        <constraint firstItem="8fJ-H7-QAl" firstAttribute="top" secondItem="sOK-lP-w7u" secondAttribute="top" constant="1" id="kr6-hX-mX8"/>
+                                        <constraint firstAttribute="trailing" secondItem="IxK-El-HBT" secondAttribute="trailing" constant="15" id="p3L-8j-EjC"/>
+                                        <constraint firstItem="ukV-RO-NGH" firstAttribute="leading" secondItem="8fJ-H7-QAl" secondAttribute="trailing" constant="30" id="qYb-CV-Xra"/>
+                                        <constraint firstItem="8fJ-H7-QAl" firstAttribute="leading" secondItem="sOK-lP-w7u" secondAttribute="leading" constant="15" id="wxN-qN-K6y"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="wordEnglishLabel" destination="IxK-El-HBT" id="d9E-Kr-Hwo"/>
+                                    <outlet property="wordJapaneseLabel" destination="ukV-RO-NGH" id="zTQ-8o-nf9"/>
+                                    <outlet property="wordNameLabel" destination="8fJ-H7-QAl" id="yf5-ra-T5c"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="npB-JJ-RCS" id="fgO-Kh-AwO"/>
+                            <outlet property="delegate" destination="npB-JJ-RCS" id="ODG-DN-Djm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dictionary" id="GcO-UE-dEx">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="Mbi-xw-qbL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="PXE-DW-rSE">
+                                <rect key="frame" x="288" y="4" width="86" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Quiz">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startQuizButtonPressed:" destination="npB-JJ-RCS" eventType="touchUpInside" id="Mm3-OP-aXt"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="GzD-F8-zn3" id="beY-Mo-HpP"/>
+                        <segue destination="clL-6t-1I8" kind="presentation" identifier="goToQuiz" id="fK7-qI-wbx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ng-dw-tWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2567.6923076923076" y="86.729857819905206"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="8Jg-wO-b15">
+            <objects>
+                <viewController id="clL-6t-1I8" customClass="QuizViewController" customModule="Japanese_Dict_Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4HY-yI-Faw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="139" translatesAutoresizingMaskIntoConstraints="NO" id="YAS-hn-MdH">
+                                <rect key="frame" x="20" y="20" width="350" height="750"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3aq-ZW-ZU0">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="fHf-is-Wvb"/>
+                                        </constraints>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODF-7q-ktT">
+                                        <rect key="frame" x="0.0" y="149" width="350" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ASK-2e-lFu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-NV-b6j">
+                                        <rect key="frame" x="0.0" y="388" width="350" height="129.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plr-RZ-QuI">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="54.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                <state key="normal" title="Choice 1"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="clL-6t-1I8" eventType="touchUpInside" id="bkB-Np-mPK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-Hf-0fu">
+                                                <rect key="frame" x="0.0" y="74.666666666666686" width="350" height="54.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                <state key="normal" title="Choice 2"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="clL-6t-1I8" eventType="touchUpInside" id="q6S-b9-XmJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNP-oi-DA4">
+                                        <rect key="frame" x="0.0" y="656.33333333333337" width="350" height="93.666666666666629"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="End Quiz">
+                                            <color key="titleColor" systemColor="systemYellowColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endQuizButtonPressed:" destination="clL-6t-1I8" eventType="touchUpInside" id="63Y-HR-Ys4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CES-c1-RhD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YAS-hn-MdH" firstAttribute="centerY" secondItem="4HY-yI-Faw" secondAttribute="centerY" id="GMV-mZ-6va"/>
+                            <constraint firstItem="CES-c1-RhD" firstAttribute="trailing" secondItem="YAS-hn-MdH" secondAttribute="trailing" constant="20" id="W4q-xt-4qj"/>
+                            <constraint firstItem="YAS-hn-MdH" firstAttribute="centerX" secondItem="4HY-yI-Faw" secondAttribute="centerX" id="hXe-qH-Ud8"/>
+                            <constraint firstItem="YAS-hn-MdH" firstAttribute="top" secondItem="CES-c1-RhD" secondAttribute="top" constant="20" id="pNa-NS-85b"/>
+                            <constraint firstAttribute="bottom" secondItem="YAS-hn-MdH" secondAttribute="bottom" constant="20" id="rX1-pJ-p7a"/>
+                            <constraint firstItem="YAS-hn-MdH" firstAttribute="leading" secondItem="CES-c1-RhD" secondAttribute="leading" constant="20" id="t8h-LB-JI3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="choiceLabel1" destination="plr-RZ-QuI" id="YDM-JW-gTk"/>
+                        <outlet property="choiceLabel2" destination="mRj-Hf-0fu" id="isw-8H-ayn"/>
+                        <outlet property="progressBar" destination="3aq-ZW-ZU0" id="IQT-7S-0LR"/>
+                        <outlet property="questionLabel" destination="ODF-7q-ktT" id="OCa-9G-chQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0L-Jo-L6d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3304.6153846153843" y="86.729857819905206"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="7eT-Yt-ZjN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bwN-EC-eSO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1S3-4A-9XJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xhe-pb-oYu">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="npB-JJ-RCS" kind="relationship" relationship="rootViewController" id="qQg-yE-IUG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aws-4c-EBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810.7692307692307" y="87.440758293838854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
